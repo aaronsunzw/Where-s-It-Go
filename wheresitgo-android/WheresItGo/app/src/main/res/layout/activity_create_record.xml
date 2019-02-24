@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.aaronsng.wheresitgo.activity.CreateRecordActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/text_view_record_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Record Title:"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+
+        <EditText
+            android:id="@+id/edit_text_record_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Please enter the record title here"
+            android:maxLines="1"
+            android:background="@color/grayTextBox"
+            android:layout_below="@+id/text_view_record_title"/>
+
+        <TextView
+            android:id="@+id/text_view_record_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Record Description:"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_below="@+id/edit_text_record_title"
+            android:layout_marginTop="10dp"
+            />
+
+        <EditText
+            android:id="@+id/edit_text_record_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Please enter the record description here"
+            android:background="@color/grayTextBox"
+            android:gravity="start"
+            android:minLines="5"
+            android:maxLines="5"
+            android:layout_below="@+id/text_view_record_desc"/>
+
+        <TextView
+            android:id="@+id/text_view_upload_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload an Image"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_below="@+id/edit_text_record_desc"
+            />
+
+        <ImageView
+            android:id="@+id/image_view_upload_image"
+            android:layout_width="match_parent"
+            android:scaleType="fitCenter"
+            android:layout_height="180dp"
+            android:onClick="btnUploadImage"
+            android:background="@color/grayTextBox"
+            android:layout_below="@+id/text_view_upload_image"
+            android:padding="5dp"
+            android:clickable="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tap here to upload an Image"
+            android:layout_below="@+id/text_view_upload_image"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginTop="70dp"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:id="@+id/text_view_voice_recording"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Voice Recording"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentLeft="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_below="@+id/image_view_upload_image"
+            />
+
+        <Button
+            android:id="@+id/button_record_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RECORD"
+            android:clickable="true"
+            style="@style/Base.Widget.AppCompat.Button.Colored"
+            android:layout_below="@+id/text_view_voice_recording"
+            android:layout_toLeftOf="@+id/button_play_audio"
+            />
+
+        <!--<Button-->
+            <!--android:id="@+id/button_stop_audio"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="STOP"-->
+            <!--android:clickable="true"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--style="@style/Base.Widget.AppCompat.Button.Colored"-->
+            <!--android:layout_below="@+id/text_view_voice_recording"-->
+            <!--/>-->
+
+        <Button
+            android:id="@+id/button_play_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PLAY"
+            android:clickable="true"
+            android:layout_alignParentRight="true"
+            style="@style/Base.Widget.AppCompat.Button.Colored"
+            android:layout_below="@+id/text_view_voice_recording"
+            />
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_text_record_desc">
+
+            <Button
+                android:id="@+id/button_create_record"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Create"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textAlignment="center"
+                android:onClick="btnCreateRecord"
+                />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.aaronsng.wheresitgo.fragment.CategoryRecordsFragment">
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/section_category_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/text_view_category_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category Title"
+            android:ems="9"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            />
+
+        <Button
+            android:id="@+id/button_delete_category"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="DELETE"
+            android:textStyle="bold"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textAlignment="center"
+            />
+        <TextView
+            android:id="@+id/text_view_category_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/secondary_text"
+            android:text="Category Description"
+            android:ems="9"
+            android:textAppearance="?android:textAppearanceListItem"
+            android:layout_below="@+id/text_view_category_title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minLines="5"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="?attr/colorPrimary"
+            android:layout_below="@+id/text_view_category_desc"/>
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout_records"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/section_category_information">
+
+        <ListView
+            android:id="@+id/list_records"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ListView>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:text="You have no records! \nTo add a record, please tap on the button in the bottom right"
+        android:id="@+id/textViewEmptyRecords"
+        android:layout_below="@+id/section_category_information"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_add_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:tint="@android:color/white"
+        android:backgroundTint="@color/colorPrimary"
+        app:srcCompat="@android:drawable/ic_input_add"/>
+</RelativeLayout>
+</FrameLayout>

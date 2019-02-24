@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_my_categories"
+            android:icon="@android:drawable/ic_menu_view"
+            android:title="My Categories" />
+        <item
+            android:id="@+id/nav_create_category"
+            android:icon="@android:drawable/ic_input_add"
+            android:title="Create Category" />
+
+        <item
+            android:id="@+id/nav_search_records"
+            android:icon="@android:drawable/ic_menu_search"
+            android:title="Search Records"/>
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@android:drawable/ic_menu_revert"
+            android:title="Log out" />
+    </group>
+
+
+</menu>

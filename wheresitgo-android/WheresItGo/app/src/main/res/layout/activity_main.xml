@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.MainActivity"
+    style = "@style/Theme.AppCompat.NoActionBar"
+    >
+
+    <android.support.design.widget.AppBarLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@color/colorPrimary"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:id= "@+id/logo_layout">
+
+
+            <ImageView
+                android:id="@+id/img_view_logo"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:ems ="9"
+                android:src="@drawable/logo_wig_orb"
+                android:scaleType="centerCrop"
+                android:layout_margin="20dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo_layout"
+            android:gravity="center_vertical"
+            android:id="@+id/title_app_bold">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Where's it go?"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:fontFamily="casual"
+                android:textColor="#ffffff"
+                android:textAlignment="center"
+                android:background="@color/colorPrimary"
+                android:paddingBottom="5dp"
+                />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_app_bold"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:id = "@+id/layout_login_entry"
+            >
+
+            <EditText
+                android:id="@+id/edit_text_username"
+                android:layout_width="220dp"
+                android:layout_height="40dp"
+                android:background="@color/grayTextBox"
+                android:maxLines="1"
+                android:ems="9"
+                android:padding="5dip"
+                android:hint="Username"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+                android:inputType="textCapCharacters"
+                android:textColor="@android:color/black"
+                android:paddingBottom="10dp"
+                android:layout_margin="5dp"
+                android:gravity="center_horizontal"
+                />
+
+            <EditText
+                android:id="@+id/edit_text_password"
+                android:layout_width="220dp"
+                android:layout_height="40dp"
+                android:background="@color/grayTextBox"
+                android:maxLines="1"
+                android:ems="9"
+                android:padding="5dip"
+                android:hint="Password"
+                android:textColor="@android:color/black"
+                android:layout_below="@+id/edit_text_username"
+                android:paddingBottom="10dp"
+                android:layout_margin="5dp"
+                android:inputType="textPassword"
+                android:gravity="center_horizontal"
+                />
+
+            <EditText
+                android:id="@+id/edit_text_server_url"
+                android:layout_width="220dp"
+                android:layout_height="40dp"
+                android:background="@color/grayTextBox"
+                android:padding="5dip"
+                android:hint="Server: e.g. 192.168.1.69"
+                android:textColor="@android:color/black"
+                android:layout_below="@+id/edit_text_password"
+                android:paddingBottom="10dp"
+                android:layout_margin="5dp"
+                android:gravity="center_horizontal"
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_login_entry"
+            android:gravity="center">
+
+
+            <Button
+                android:id="@+id/button_login"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textAlignment="center"
+                android:text="Login"
+                style="@style/Base.Widget.AppCompat.Button.Colored"
+                android:onClick="btnLogin"
+                android:layout_margin="5dp"
+                />
+            <Button
+                android:id="@+id/button_register"
+                android:layout_below="@+id/button_login"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textAlignment="center"
+                style="@style/Base.Widget.AppCompat.Button.Colored"
+                android:text="Register"
+                android:onClick="btnRegister"
+                android:layout_margin="5dp"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/snackbarCoordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
